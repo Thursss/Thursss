@@ -1,0 +1,124 @@
+/* 板块居中 */
+.wide {
+  width: 1200px;
+  margin: 0 auto;
+}
+/* 清除浮动 */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: '';
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/* 对齐方式 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.tl {
+  text-align: left;
+}
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+/*隐藏*/
+.none {
+  display: none;
+}
+.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+/* 单行省略 */
+.ellipse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 多行省略 */
+.ellipselist {
+  text-overflow: -o-ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/*行内元素*/
+.child-inlineblock>* {
+   display: inline-block;
+   vertical-align: middle;
+   *display: inline;
+   *zoom: 1;
+}
+.inlineblock{
+    display: inline-block;
+    vertical-align: middle;
+    *display: inline;
+    *zoom: 1;
+}
+/*icon 小图标*/
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+/*位置居中*/
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.center2{
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.vertical{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.vertical2{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.middle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+}
+.middle2 {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+/*图片处理*/
+.img-group{
+  position: relative;
+  img{
+    max-width: 100%;
+    max-height:100%;
+    .middle2;
+  }
+}
