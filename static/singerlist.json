@@ -1,0 +1,794 @@
+{
+  "singerList": {
+    "data": {
+      "area": -100,
+      "genre": 3,
+      "index": -100,
+      "sex": -100,
+      "singerlist": [
+        {
+          "country": "",
+          "singer_id": 940748,
+          "singer_mid": "004WgCsE3KBddt",
+          "singer_name": "陈粒",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000004WgCsE3KBddt.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 61620,
+          "singer_mid": "004KKLWZ4320g1",
+          "singer_name": "宋冬野",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000004KKLWZ4320g1.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 40449,
+          "singer_mid": "001Lr98T0yEWAk",
+          "singer_name": "赵雷",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001Lr98T0yEWAk.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 1199153,
+          "singer_mid": "003JE8jQ46n049",
+          "singer_name": "焦迈奇",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000003JE8jQ46n049.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 951320,
+          "singer_mid": "000PeZCQ1i4XVs",
+          "singer_name": "房东的猫",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000000PeZCQ1i4XVs.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 1060995,
+          "singer_mid": "003NTUrM17PJhv",
+          "singer_name": "徐秉龙",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000003NTUrM17PJhv.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 158556,
+          "singer_mid": "003VJ4nP0Q19xJ",
+          "singer_name": "阿肆",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000003VJ4nP0Q19xJ.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 171061,
+          "singer_mid": "001kwvXz1vTlaP",
+          "singer_name": "马頔",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001kwvXz1vTlaP.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 208,
+          "singer_mid": "001QY1cc2SIqpB",
+          "singer_name": "水木年华",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001QY1cc2SIqpB.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 978065,
+          "singer_mid": "001SXl8y2mQobu",
+          "singer_name": "陈鸿宇",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001SXl8y2mQobu.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 1041231,
+          "singer_mid": "0023ni2j3F9CpN",
+          "singer_name": "Jam",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000023ni2j3F9CpN.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 1042260,
+          "singer_mid": "0020IaUo4Vgsjk",
+          "singer_name": "齐一",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000020IaUo4Vgsjk.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 12721,
+          "singer_mid": "0044gacX2dLf6i",
+          "singer_name": "郝云",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000044gacX2dLf6i.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 212,
+          "singer_mid": "002WkEWV1TA75B",
+          "singer_name": "老狼",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000002WkEWV1TA75B.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 53,
+          "singer_mid": "002T0ifq4LjAcD",
+          "singer_name": "罗大佑",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000002T0ifq4LjAcD.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 202435,
+          "singer_mid": "003r4Mf04S5JMr",
+          "singer_name": "贰佰",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000003r4Mf04S5JMr.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 157983,
+          "singer_mid": "00169imA4Iub3I",
+          "singer_name": "花粥",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M00000169imA4Iub3I.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 1010189,
+          "singer_mid": "003hTTjo3JYqgM",
+          "singer_name": "谢春花",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000003hTTjo3JYqgM.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 5558,
+          "singer_mid": "000bfa1f0IWKn0",
+          "singer_name": "张悬",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000000bfa1f0IWKn0.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 20526,
+          "singer_mid": "001bAT7U34kJP0",
+          "singer_name": "赵照",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001bAT7U34kJP0.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 14152,
+          "singer_mid": "003vpFiU2OKant",
+          "singer_name": "Ingrid Michaelson (英格丽·迈克尔森)",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000003vpFiU2OKant.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 1102711,
+          "singer_mid": "003vSrlp0ujV6o",
+          "singer_name": "鹏泊",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000003vSrlp0ujV6o.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 1021787,
+          "singer_mid": "002dwW8C3cQtmC",
+          "singer_name": "晓月老板",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000002dwW8C3cQtmC.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 163825,
+          "singer_mid": "002SSo5Y4PKZjG",
+          "singer_name": "王晓天",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000002SSo5Y4PKZjG.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 70833,
+          "singer_mid": "001a571Z0hwSLK",
+          "singer_name": "Kim Taylor",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001a571Z0hwSLK.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 12577,
+          "singer_mid": "0027WKt61nkQr4",
+          "singer_name": "Yael Naïm",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000027WKt61nkQr4.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 1195908,
+          "singer_mid": "001YS2uE1TV9qy",
+          "singer_name": "蒋敦豪",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001YS2uE1TV9qy.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 184239,
+          "singer_mid": "004FJxJV4DwJyc",
+          "singer_name": "张羿凡",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000004FJxJV4DwJyc.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 186048,
+          "singer_mid": "000TyYTK3lNT9Q",
+          "singer_name": "陈小虎",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000000TyYTK3lNT9Q.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 40438,
+          "singer_mid": "002PYYRY3ptMsR",
+          "singer_name": "安与骑兵",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000002PYYRY3ptMsR.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 157880,
+          "singer_mid": "004J3Tvx00N44V",
+          "singer_name": "叶里",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000004J3Tvx00N44V.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 13221,
+          "singer_mid": "004XAGWw2pOrha",
+          "singer_name": "Passenger",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000004XAGWw2pOrha.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 60,
+          "singer_mid": "001rbe4h38XQBr",
+          "singer_name": "齐豫",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001rbe4h38XQBr.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 158119,
+          "singer_mid": "004WROsW0OjNeD",
+          "singer_name": "尧十三",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000004WROsW0OjNeD.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 66715,
+          "singer_mid": "0040VVoK1Sn0Pc",
+          "singer_name": "丽江小倩",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000040VVoK1Sn0Pc.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 15806,
+          "singer_mid": "000qJyjb0IHUJx",
+          "singer_name": "川子",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000000qJyjb0IHUJx.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 7297,
+          "singer_mid": "001BhAX219ZCJb",
+          "singer_name": "Tamas Wells",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001BhAX219ZCJb.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 1445344,
+          "singer_mid": "000tLaek0mBNVu",
+          "singer_name": "馒头",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000000tLaek0mBNVu.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 201481,
+          "singer_mid": "0024HSMz1yfolh",
+          "singer_name": "安来宁",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000024HSMz1yfolh.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 6693,
+          "singer_mid": "001bRKBw3v1lvD",
+          "singer_name": "李春波",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001bRKBw3v1lvD.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 16667,
+          "singer_mid": "000HaRHO4HacNR",
+          "singer_name": "Simon & Garfunkel",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000000HaRHO4HacNR.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 1102317,
+          "singer_mid": "0044LdJc3P5SHG",
+          "singer_name": "郭旭",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000044LdJc3P5SHG.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 18651,
+          "singer_mid": "000FbcQj0eHExA",
+          "singer_name": "黑撒",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000000FbcQj0eHExA.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 13049,
+          "singer_mid": "0008kPEA0kQ4ub",
+          "singer_name": "The Weepies",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000008kPEA0kQ4ub.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 192763,
+          "singer_mid": "003Z8WjM23prlT",
+          "singer_name": "陈小熊",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000003Z8WjM23prlT.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 25804,
+          "singer_mid": "003iSnza20JVfx",
+          "singer_name": "10cm (십센치)",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000003iSnza20JVfx.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 16252,
+          "singer_mid": "002D0n4I4XU3Fi",
+          "singer_name": "小娟 & 山谷里的居民",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000002D0n4I4XU3Fi.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 11901,
+          "singer_mid": "003KTEy40dGuo6",
+          "singer_name": "王雅洁",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000003KTEy40dGuo6.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 164541,
+          "singer_mid": "002joUjU1bmPZj",
+          "singer_name": "刘锦泽",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000002joUjU1bmPZj.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 33480,
+          "singer_mid": "002NVosq3NweS5",
+          "singer_name": "Susie Tallman",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000002NVosq3NweS5.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 5037,
+          "singer_mid": "002Fr8pA1oo1vd",
+          "singer_name": "满江",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000002Fr8pA1oo1vd.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 12165,
+          "singer_mid": "000mjLxD0n4AbP",
+          "singer_name": "Iron & Wine",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000000mjLxD0n4AbP.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 1105562,
+          "singer_mid": "004KnpPM0FvWoq",
+          "singer_name": "倪健",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000004KnpPM0FvWoq.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 359371,
+          "singer_mid": "001dwOPz1yYcl6",
+          "singer_name": "程璧",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001dwOPz1yYcl6.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 7474,
+          "singer_mid": "003g5HCa0GZWMo",
+          "singer_name": "John Denver (约翰·丹佛)",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000003g5HCa0GZWMo.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 999592,
+          "singer_mid": "002PtAb13jzbTm",
+          "singer_name": "钟易轩",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000002PtAb13jzbTm.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 157175,
+          "singer_mid": "002vvl5N0IBgy6",
+          "singer_name": "张过年",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000002vvl5N0IBgy6.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 979912,
+          "singer_mid": "001TUnFo00FUzY",
+          "singer_name": "夏小虎",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001TUnFo00FUzY.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 158064,
+          "singer_mid": "001yNQZl04c3Oh",
+          "singer_name": "莫西子诗",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001yNQZl04c3Oh.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 4094,
+          "singer_mid": "004IgQnG3Y92Z1",
+          "singer_name": "邵夷贝",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000004IgQnG3Y92Z1.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 967459,
+          "singer_mid": "00257xNB06Ucx6",
+          "singer_name": "柳爽",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M00000257xNB06Ucx6.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 8488,
+          "singer_mid": "0043rtQk1HZCBD",
+          "singer_name": "Leonard Cohen (莱昂纳德·科恩)",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000043rtQk1HZCBD.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 17975,
+          "singer_mid": "0033nTph0OCDRd",
+          "singer_name": "The Innocence Mission (纯真使团)",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000033nTph0OCDRd.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 5213,
+          "singer_mid": "001B7xaT4HXmRy",
+          "singer_name": "Sophie Zelmani (苏菲·珊曼妮)",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001B7xaT4HXmRy.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 14870,
+          "singer_mid": "004ekcRg1hmArY",
+          "singer_name": "Rosie Thomas (萝丝·托马斯)",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000004ekcRg1hmArY.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 947637,
+          "singer_mid": "0047OR8F42TYbM",
+          "singer_name": "小海",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000047OR8F42TYbM.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 20757,
+          "singer_mid": "00366lTK4aReqi",
+          "singer_name": "泽尔丹",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M00000366lTK4aReqi.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 561,
+          "singer_mid": "001pxv2v4Olrcg",
+          "singer_name": "五条人",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001pxv2v4Olrcg.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 4989,
+          "singer_mid": "0016ZQpj3m8Tru",
+          "singer_name": "Damien Rice",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000016ZQpj3m8Tru.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 67858,
+          "singer_mid": "000N82ZO0rE4Ex",
+          "singer_name": "Elizabeth Mitchell (伊丽莎白·米切尔)",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000000N82ZO0rE4Ex.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 950281,
+          "singer_mid": "004I4zUe2iQt0N",
+          "singer_name": "冯佳界",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000004I4zUe2iQt0N.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 4669,
+          "singer_mid": "002m18xZ4CZQVf",
+          "singer_name": "皓天",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000002m18xZ4CZQVf.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 505,
+          "singer_mid": "0013bmPw3PPzoB",
+          "singer_name": "张玮玮",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000013bmPw3PPzoB.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 4441,
+          "singer_mid": "004UL1792p7lSc",
+          "singer_name": "叶蓓",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000004UL1792p7lSc.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 492,
+          "singer_mid": "0047RkKe3Thugs",
+          "singer_name": "Keren Ann (凯伦·安)",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000047RkKe3Thugs.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 154845,
+          "singer_mid": "0027htXd28lvAj",
+          "singer_name": "李晋",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000027htXd28lvAj.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 89968,
+          "singer_mid": "001vlORc1KlQEa",
+          "singer_name": "谢旦",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000001vlORc1KlQEa.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 176427,
+          "singer_mid": "003eohl3306i0C",
+          "singer_name": "周三",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000003eohl3306i0C.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 9,
+          "singer_mid": "0016y9Xu1gZLBi",
+          "singer_name": "陈明章",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M0000016y9Xu1gZLBi.webp"
+        },
+        {
+          "country": "",
+          "singer_id": 22658,
+          "singer_mid": "000QzTCk3lc5yX",
+          "singer_name": "梁晓雪",
+          "singer_pic": "http://y.gtimg.cn/music/photo_new/T001R150x150M000000QzTCk3lc5yX.webp"
+        }
+      ],
+      "tags": {
+        "area": [
+          {
+            "id": -100,
+            "name": "全部"
+          },
+          {
+            "id": 200,
+            "name": "内地"
+          },
+          {
+            "id": 2,
+            "name": "港台"
+          },
+          {
+            "id": 5,
+            "name": "欧美"
+          },
+          {
+            "id": 4,
+            "name": "日本"
+          },
+          {
+            "id": 3,
+            "name": "韩国"
+          },
+          {
+            "id": 6,
+            "name": "其他"
+          }
+        ],
+        "genre": [
+          {
+            "id": -100,
+            "name": "全部"
+          },
+          {
+            "id": 1,
+            "name": "流行"
+          },
+          {
+            "id": 6,
+            "name": "嘻哈"
+          },
+          {
+            "id": 2,
+            "name": "摇滚"
+          },
+          {
+            "id": 4,
+            "name": "电子"
+          },
+          {
+            "id": 3,
+            "name": "民谣"
+          },
+          {
+            "id": 8,
+            "name": "R&B"
+          },
+          {
+            "id": 10,
+            "name": "民歌"
+          },
+          {
+            "id": 9,
+            "name": "轻音乐"
+          },
+          {
+            "id": 5,
+            "name": "爵士"
+          },
+          {
+            "id": 14,
+            "name": "古典"
+          },
+          {
+            "id": 25,
+            "name": "乡村"
+          },
+          {
+            "id": 20,
+            "name": "蓝调"
+          }
+        ],
+        "index": [
+          {
+            "id": -100,
+            "name": "热门"
+          },
+          {
+            "id": 1,
+            "name": "A"
+          },
+          {
+            "id": 2,
+            "name": "B"
+          },
+          {
+            "id": 3,
+            "name": "C"
+          },
+          {
+            "id": 4,
+            "name": "D"
+          },
+          {
+            "id": 5,
+            "name": "E"
+          },
+          {
+            "id": 6,
+            "name": "F"
+          },
+          {
+            "id": 7,
+            "name": "G"
+          },
+          {
+            "id": 8,
+            "name": "H"
+          },
+          {
+            "id": 9,
+            "name": "I"
+          },
+          {
+            "id": 10,
+            "name": "J"
+          },
+          {
+            "id": 11,
+            "name": "K"
+          },
+          {
+            "id": 12,
+            "name": "L"
+          },
+          {
+            "id": 13,
+            "name": "M"
+          },
+          {
+            "id": 14,
+            "name": "N"
+          },
+          {
+            "id": 15,
+            "name": "O"
+          },
+          {
+            "id": 16,
+            "name": "P"
+          },
+          {
+            "id": 17,
+            "name": "Q"
+          },
+          {
+            "id": 18,
+            "name": "R"
+          },
+          {
+            "id": 19,
+            "name": "S"
+          },
+          {
+            "id": 20,
+            "name": "T"
+          },
+          {
+            "id": 21,
+            "name": "U"
+          },
+          {
+            "id": 22,
+            "name": "V"
+          },
+          {
+            "id": 23,
+            "name": "W"
+          },
+          {
+            "id": 24,
+            "name": "X"
+          },
+          {
+            "id": 25,
+            "name": "Y"
+          },
+          {
+            "id": 26,
+            "name": "Z"
+          },
+          {
+            "id": 27,
+            "name": "#"
+          }
+        ],
+        "sex": [
+          {
+            "id": -100,
+            "name": "全部"
+          },
+          {
+            "id": 0,
+            "name": "男"
+          },
+          {
+            "id": 1,
+            "name": "女"
+          },
+          {
+            "id": 2,
+            "name": "组合"
+          }
+        ]
+      },
+      "total": 1077
+    },
+    "code": 0
+  },
+  "code": 0,
+  "ts": 1570365881807
+}
