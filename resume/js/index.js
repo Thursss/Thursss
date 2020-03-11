@@ -38,7 +38,7 @@ $(function(){
 				$('.section3 div').animate({marginLeft:"150%"}, 1000);
 			}
 			if(index == "4") {
-				$('.section4 h1').fadeOut(2000);
+				$('.section4 h1').fadeOut(1000);
 				$(".section4 h3").animate({marginTop:"100%"}, 1000);
 			}
 			
@@ -47,5 +47,6 @@ $(function(){
 	})
 	
 	//
+	// $('.section3 div.section-main').on('')
 });
 
