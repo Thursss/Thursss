@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="but">检测图片可用性</button>
+</body>
+<script>
+  function checkImgExists(oid) {
+    let imgArr = [];
+    let imgObj = new Image();
+    let i = 0;
+    imgObj.src = `http://114.116.155.221:9999/media/drug/${oid}/${i++}.jpg`;
+    while (imgObj.fileSize || (imgObj.width !== 0 || imgObj.height !== 0)) {
+       imgObj.src = `http://114.116.155.221:9999/media/drug/${oid}/${i++}.jpg`;
+       console.log(imgObj.width);
+       imgArr.push(imgObj.src);
+     }
+    console.log(imgArr);
+  }
+
+  function checkImgExists2(oid) {
+    let imgObj = new Image();
+    imgObj.src = `http://114.116.155.221:9999/media/drug/${oid}/3.jpg`;
+    imgObj.onerror = () => {
+      console.log(imgObj.width);
+    }
+    console.log(imgObj.width);
+  }
+
+  const butEle = document.getElementById('but');
+  butEle.addEventListener('click', () => {
+    // checkImgExists('1598238059001001026');
+    checkImgExists2('1598238059001001026');
+  });
+
+</script>
+
+</html>
