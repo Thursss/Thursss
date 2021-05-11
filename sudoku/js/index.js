@@ -68,8 +68,8 @@ function initSudoku() {
 
 // 监听点击事件
 canvas.addEventListener('click', function ({ offsetX, offsetY }) {
-  const offsetXPint = Math.ceil(offsetX / l1) * l1 - (l1 / 2);
-  const offsetYPint = Math.ceil(offsetY / l2) * l2 - (l2 / 2);
+  const offsetYPint = Math.ceil(offsetX / l1) * l1 - (l1 / 2);
+  const offsetXPint = Math.ceil(offsetY / l2) * l2 - (l2 / 2);
   // drawFont({ offsetXPint, offsetYPint }, '×');
 });
 initBut.addEventListener('click', initSudoku);
