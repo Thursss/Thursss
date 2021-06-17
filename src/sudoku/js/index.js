@@ -7,6 +7,18 @@ const XLineCount = 9;
 const YLineCount = 9;
 const l1 = boxInfo.height / YLineCount;
 const l2 = boxInfo.width / XLineCount;
+let sudoku = [];
+
+// 获取数独题库
+$.ajax({
+  url: './sudoku.json',
+  datatype: 'json',
+  async: false,
+  data: {},
+  success: (result) => {
+    sudoku = result;
+  }
+});
 
 // 绘制直线方法
 function drawLine({ beginX, beginY, endX, endY }, lineWidth = 1, fillStyle = 'rgb(0, 0, 0, .5)') {
@@ -49,30 +61,22 @@ function initSudoku() {
     drawLine({ beginX: i * l2, beginY: 0, endX: i * l2, endY: boxInfo.height }, lineWidth, fillStyle);
   }
   // 循环绘制数字
-  $.ajax({
-    url: './sudoku.json',
-    datatype: 'json',
-    async: false,
-    data: {},
-    success: (result) => {
-      const numArr = result[0]?.num.split('');
-      for (let i = 0; i < numArr.length; i++) {
-        if (numArr[i] == 0) continue;
-        const x = i % 9;
-        const y = Math.floor(i / 9);
-        drawFont({offsetXPint: (l2 * x + l2 / 2), offsetYPint: (l1 * y + l1 / 2)}, numArr[i]);
-      }
-    }
-  })
+  const numArr = sudoku[0]?.num.split('');
+  for (let i = 0; i < numArr.length; i++) {
+    if (numArr[i] == 0) continue;
+    const x = i % 9;
+    const y = Math.floor(i / 9);
+    drawFont({offsetXPint: (l2 * x + l2 / 2), offsetYPint: (l1 * y + l1 / 2)}, numArr[i]);
+  }
 }
 
 // 监听点击事件
 canvas.addEventListener('click', function ({ offsetX, offsetY }) {
-  const offsetYPint = Math.ceil(offsetX / l1) * l1 - (l1 / 2);
-  const offsetXPint = Math.ceil(offsetY / l2) * l2 - (l2 / 2);
-  // drawFont({ offsetXPint, offsetYPint }, '×');
+  const offsetYPint = Math.ceil(offsetY / l1) * l1 - (l1 / 2);
+  const offsetXPint = Math.ceil(offsetX / l2) * l2 - (l2 / 2);
+  drawFont({ offsetXPint, offsetYPint }, '×');
 });
-initBut.addEventListener('click', initSudoku);
+initBut?.addEventListener('click', initSudoku);
 
 // 开始
 initSudoku();
