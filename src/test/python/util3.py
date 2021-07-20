@@ -23,6 +23,6 @@ if __name__ == "__main__":
     response = requests.get(url=url, params=param, headers=headers)
 
     page_text = response.text
-    file_name = './data/' + kw + '.html'
+    file_name = './download/' + kw + '.html'
     with open(file_name, 'w', encoding='utf-8') as fp:
         fp.write(page_text)

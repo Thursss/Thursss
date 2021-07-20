@@ -22,7 +22,7 @@ if __name__ == "__main__":
     print(dic_obj)
 
     # 持久化存储
-    fp = open('./data/douban.json', 'w', encoding='utf-8')
+    fp = open('./download/douban.json', 'w', encoding='utf-8')
 
     # https://www.bejson.com/ 使用json格式化工具查看
     json.dump(dic_obj, fp = fp, ensure_ascii=False)

@@ -45,5 +45,5 @@ if __name__ == '__main__':
     url = 'https://pic.qiushibaike.com/system/pictures/12442/124429400/medium/W1760S5MEZXI502X.jpg'
     # text：字符串  content(二进制)     json() 对象
     img_data = requests.get(url=url).content
-    with open('./data/img/giutu.jpg', 'wb') as fp:
+    with open('./download/giutu.jpg', 'wb') as fp:
         fp.write(img_data)
