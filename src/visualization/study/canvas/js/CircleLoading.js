@@ -2,12 +2,7 @@
  * 环形加载动画
  */
 
-//
-const canvas = document.querySelector("canvas"),
-  context = canvas.getContext("2d"),
-  centerX = canvas.width / 2,
-  centerY = canvas.height / 2,
-  rad = (Math.PI * 2) / 100;
+// 增加速度
 let speed = 0.00000001;
 
 function getRad(radVal) {
@@ -28,21 +23,14 @@ function drawCircle({
   lineWidth = 12,
   anticlockwise = false,
 }) {
-  context.save();
-  context.beginPath();
-  context.strokeStyle = color;
-  context.lineWidth = lineWidth;
-  context.arc(
-    x,
-    y,
-    radius,
-    getRad(startAngle),
-    getRad(endAngle),
-    anticlockwise
-  );
-  context.stroke();
-  context.closePath();
-  context.restore();
+  ctx.save();
+  ctx.beginPath();
+  ctx.strokeStyle = color;
+  ctx.lineWidth = lineWidth;
+  ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
+  ctx.stroke();
+  ctx.closePath();
+  ctx.restore();
 }
 
 function drawText({
@@ -52,21 +40,21 @@ function drawText({
   x = centerX,
   y = centerY,
 }) {
-  context.save();
-  context.fillStyle = color;
-  context.font = font;
-  context.textAlign = "center";
-  context.textBaseline = "middle";
-  context.fillText(text, x, y);
-  context.restore();
+  ctx.save();
+  ctx.fillStyle = color;
+  ctx.font = font;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(text, x, y);
+  ctx.restore();
 }
 
 (function drawFrame() {
   window.requestAnimationFrame(drawFrame, canvas);
-  context.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawCircle({
     color: "#ddd",
-    endAngle: rad * 100,
+    endAngle: getRad(rad * 100),
   });
   drawText({
     color: "#1cc",
@@ -74,7 +62,7 @@ function drawText({
   });
   drawCircle({
     color: "#1cc",
-    endAngle: rad * speed,
+    endAngle: getRad(rad * speed),
   });
   if (speed > 100) speed = 0;
   speed += 0.1;
