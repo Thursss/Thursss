@@ -3,11 +3,7 @@
  */
 
 // 增加速度
-let speed = 0.00000001;
-
-function getRad(radVal) {
-  return radVal - rad * 25;
-}
+let speed = 1;
 
 /**
  * 绘制环形
@@ -18,8 +14,8 @@ function drawCircle({
   y = centerY,
   radius = 100,
   color,
-  startAngle = 0,
-  endAngle = 0,
+  startAngle = getRad(0),
+  endAngle = getRad(0),
   lineWidth = 12,
   anticlockwise = false,
 }) {
@@ -65,5 +61,5 @@ function drawText({
     endAngle: getRad(rad * speed),
   });
   if (speed > 100) speed = 0;
-  speed += 0.1;
+  speed += 2;
 })();

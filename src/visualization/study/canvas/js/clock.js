@@ -20,10 +20,10 @@ ctxBack.shadowColor = "#F0F8FF";
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	showTime();
 	showBack();
-	drawSecPin();
-	drawMinPin();
-	drawHouPin();
-	setPoint();
+	// drawSecPin();
+	// drawMinPin();
+	// drawHouPin();
+	// setPoint();
 	setNum();
 })()
 
