@@ -13,10 +13,11 @@
 </body>
 <script>
     // 创建canvas对象
-    const canvas = document.createElement('canvas')
-    canvas.id = 'canvas'
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
+    const canvas = document.createElement('canvas'),
+        id = canvas.id = 'canvas',
+        w = canvas.width = window.innerWidth,
+        h = canvas.height = window.innerHeight;
+
     document.body.appendChild(canvas)
     ctx = canvas.getContext("2d")
 
@@ -33,51 +34,7 @@
 <!-- <script src="./js/test1.js"></script> -->
 <!-- <script src="./js/CircleLoading.js"></script> -->
 <!-- <script src="./js/clock.js"></script> -->
-<script>
-    // (function render() {
-    //     window.requestAnimationFrame(render, canvas)
-    //     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    // })()
-    /**
-    * 绘制环形
-    * @param {*} param0
-    */
-    function drawCircle({
-        x = centerX,
-        y = centerY,
-        radius = 100,
-        color,
-        startAngle = 0,
-        endAngle = 0,
-        lineWidth = 12,
-        anticlockwise = false,
-    }) {
-        ctx.save();
-        ctx.beginPath();
-        ctx.strokeStyle = color;
-        ctx.lineWidth = lineWidth;
-        ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise);
-        ctx.stroke();
-        ctx.restore();
-    }
-
-    drawCircle({
-        color: '#1cc',
-        x: getPointX(0),
-        y: getPointY(0),
-        endAngle: rad * 100,
-        radius: 3,
-        lineWidth: 2
-    })
-    drawCircle({
-        color: '#1cc',
-        x: getPointX(0),
-        y: getPointY(0),
-        endAngle: rad * 100,
-        radius: 230,
-        lineWidth: 2
-    })
-
-</script>
+<!-- <script src="./js/myClock.js"></script> -->
+<script src="./js/matrix.js"></script>
 
 </html>
