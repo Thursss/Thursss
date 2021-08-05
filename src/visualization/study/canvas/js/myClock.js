@@ -1,5 +1,7 @@
 const circleR = 280;
 
+const ctxBack = canvas.getContext("2d");
+
 /**
  * 绘制环形
  * @param {*} param0
@@ -87,14 +89,6 @@ function drawBase() {
     radius: 3,
     lineWidth: 1,
   });
-  drawCircle({
-    color: "#1cc",
-    x: getPointX(0),
-    y: getPointY(0),
-    endAngle: getRad(rad * 100),
-    radius: circleR,
-    lineWidth: 1,
-  });
 }
 
 function drawNum() {
@@ -106,26 +100,33 @@ function drawNum() {
     let offsetX = 0,
       offsetY = 0;
 
-    const w = (i + a / 4 - 1) / a;
-
+    const w = (i + a / 4) / a;
     if (w < 0.25) {
+      offsetX = 14;
+      offsetY = -20;
+    } else if (w == 0.25) {
       offsetX = 16;
-      offsetY = -16;
+      offsetY = -2;
     } else if (w < 0.5) {
       offsetX = 16;
+      offsetY = 14;
+    } else if (w == 0.5) {
+      offsetX = 0;
       offsetY = 16;
     } else if (w < 0.75) {
       offsetX = -16;
       offsetY = 16;
-    } else {
-      offsetX = 16;
-      offsetY = -16;
+    } else if (w == 0.75) {
+      offsetX = -16;
+      offsetY = 0;
+    } else if (w < 1) {
+      offsetX = -18;
+      offsetY = -18;
+    } else if (w == 1) {
+      offsetX = 0;
+      offsetY = -20;
     }
 
-    if ([0, 0.25, 0.5, 0.75, 1].includes(w)) {
-      offsetX = 0;
-      offsetY = 0;
-    }
     drawText({
       text: i + a / 4,
       center: "center",
@@ -136,36 +137,27 @@ function drawNum() {
 }
 
 function drawEngNeedle() {
-  const a = 24;
-  const r = (Math.PI * 2) / a;
-  for (let i = 0 - a / 4 + 1; i <= a - a / 4; i++) {
-    const x = Math.cos(r * i) * circleR,
-      y = Math.sin(r * i) * circleR + 14;
-    let offsetX = 0,
-      offsetY = 0;
-
-    const w = i / a;
-    if (w <= 0.25) {
-      offsetX = 16;
-      offsetY = -16;
-    } else if (w <= 0.5) {
-      offsetX = 16;
-      offsetY = 16;
-    } else if (w <= 0.75) {
-      offsetX = -16;
-      offsetY = 16;
-    } else {
-      offsetX = 16;
-      offsetY = -16;
-    }
-
-    drawText({
-      text: i + a / 4,
-      center: "center",
-      x: getPointX(x + offsetX),
-      y: getPointY(y + offsetY),
-    });
+  for (let i = 0; i < 60; i++) {
+    ctx.save();
+    ctx.translate(getPointX(0), getPointY(0));
+    ctx.rotate((i / 60) * 2 * Math.PI);
+    ctx.beginPath();
+    ctx.strokeStyle = "#7FFFD4";
+    ctx.moveTo(0, -circleR);
+    ctx.lineWidth = i % 5 == 0 ? 5 : 2;
+    ctx.lineTo(0, -circleR + 15);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.restore();
   }
+  drawCircle({
+    color: "#1cc",
+    x: getPointX(0),
+    y: getPointY(0),
+    endAngle: getRad(rad * 100),
+    radius: circleR,
+    lineWidth: 1,
+  });
 }
 function drawTime() {
   const { year, month, day, week, hours, minutes, seconds, milliseconds } =
@@ -221,6 +213,6 @@ function drawTime() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawBase();
   drawNum();
-  // drawEngNeedle();
+  drawEngNeedle();
   drawTime();
 })();

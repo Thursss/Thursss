@@ -19,12 +19,12 @@ ctxBack.shadowColor = "#F0F8FF";
 	window.requestAnimationFrame(pageInit, canvas);
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	showTime();
-	showBack();
-	// drawSecPin();
-	// drawMinPin();
-	// drawHouPin();
+	// showBack();
+	drawSecPin();
+	drawMinPin();
+	drawHouPin();
 	// setPoint();
-	setNum();
+	// setNum();
 })()
 
 function setNum() {
