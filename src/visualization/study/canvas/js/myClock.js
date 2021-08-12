@@ -91,7 +91,7 @@ function drawBase() {
   });
 }
 
-function drawNum() {
+function drawNum_() {
   const a = 12;
   const r = (Math.PI * 2) / a;
   for (let i = 0 - a / 4 + 1; i <= a - a / 4; i++) {
@@ -136,6 +136,20 @@ function drawNum() {
   }
 }
 
+function drawNum() {
+  for (let i = 1; i <= 12; i++) {
+    ctx.save();
+    ctx.translate(getPointX(0), getPointY(0));
+    ctx.rotate((i / 12) * 2 * Math.PI);
+    drawText({
+      text: i,
+      center: "center",
+      x: 0,
+      y: -290,
+    });
+    ctx.restore();
+  }
+}
 function drawEngNeedle() {
   for (let i = 0; i < 60; i++) {
     ctx.save();
