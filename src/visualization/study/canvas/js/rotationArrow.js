@@ -1,5 +1,4 @@
 let arrow = new Arrow({ x: centerX, y: centerY });
-arrow.draw(ctx);
 var mouse = utils.captureMouse(canvas);
 
 //动画循环函数

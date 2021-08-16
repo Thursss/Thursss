@@ -31,3 +31,54 @@ class Arrow {
     context.restore();
   }
 }
+
+// 水草
+class Aqu {
+  ctx;
+  startPoint = [];
+  endPoint1 = [];
+  endPoint2 = [];
+  num = 0;
+  beta = 0;
+  color = "#3b154e";
+  constructor({ ctx, num = 100, color = "#3b154e" }) {
+    this.ctx = ctx;
+    this.num = num;
+    this.color = color;
+    for (let i = 0; i < this.num; i++) {
+      this.startPoint[i] = [(Math.random() + i) * 12, this.ctx.canvas.height];
+      this.endPoint1[i] = [
+        this.startPoint[i][0],
+        this.ctx.canvas.height / 2 + Math.random() * 125,
+      ];
+      this.endPoint2[i] = [this.startPoint[i][0], this.endPoint1[i][1] - 160];
+    }
+  }
+  draw() {
+    if (!this.ctx) {
+      console.error("not found canvas");
+      return;
+    }
+    this.ctx.save();
+    this.ctx.lineWidth = 14;
+    this.ctx.lineCap = "round";
+    this.ctx.globalAlpha = 0.8;
+    this.ctx.strokeStyle = this.color;
+    let c = .008;
+    this.beta += c;
+    for (let i = 0; i < this.num; i++) {
+      ctx.beginPath();
+
+      this.endPoint2[i][0] += (Math.sin(Math.PI * this.beta) * Math.random() * 2);
+      this.ctx.moveTo(this.startPoint[i][0], this.startPoint[i][1]);
+      this.ctx.quadraticCurveTo(
+        this.endPoint1[i][0],
+        this.endPoint1[i][1],
+        this.endPoint2[i][0] - 25,
+        this.endPoint2[i][1]
+      );
+      this.ctx.stroke();
+    }
+    ctx.restore();
+  }
+}
