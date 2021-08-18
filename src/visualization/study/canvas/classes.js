@@ -64,12 +64,12 @@ class Aqu {
     this.ctx.lineCap = "round";
     this.ctx.globalAlpha = 0.8;
     this.ctx.strokeStyle = this.color;
-    let c = .008;
+    let c = 0.008;
     this.beta += c;
     for (let i = 0; i < this.num; i++) {
       ctx.beginPath();
 
-      this.endPoint2[i][0] += (Math.sin(Math.PI * this.beta) * Math.random() * 2);
+      this.endPoint2[i][0] += Math.sin(Math.PI * this.beta) * Math.random() * 2;
       this.ctx.moveTo(this.startPoint[i][0], this.startPoint[i][1]);
       this.ctx.quadraticCurveTo(
         this.endPoint1[i][0],
@@ -79,6 +79,37 @@ class Aqu {
       );
       this.ctx.stroke();
     }
+    ctx.restore();
+  }
+}
+
+// 圆
+class Round {
+  centerPointX;
+  centerPointY;
+  radius;
+  fillStyle;
+  constructor({
+    centerPointX = 0,
+    centerPointY = 0,
+    radius = 10,
+    fillStyle = "#ccc",
+  }) {
+    this.centerPointX = centerPointX;
+    this.centerPointY = centerPointY;
+    this.radius = radius;
+    this.fillStyle = fillStyle;
+  }
+
+  draw(ctx) {
+    ctx.save();
+    ctx.beginPath();
+    ctx.strokeStyle = this.fillStyle;
+    ctx.arc(this.centerPointX, this.centerPointY, this.radius, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.closePath();
+    ctx.fillStyle = this.fillStyle;
+    ctx.fill();
     ctx.restore();
   }
 }
