@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>绘制柱状图</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    canvas {
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="canvas" height="800" width="1200"></canvas>
+</body>
+<script>
+  // 获取canvas绘图上下文
+  const canvas = document.getElementById('canvas')
+  const context = canvas.getContext('2d')
+
+  const options = {
+    chartZone: [50, 50, 1000, 700],//标识绘图区域
+    yAxisLabel: ['0', '100', '200', '300', '400'],//标示Y轴坐标
+    yMax: 400,//Y轴最大值
+    xAxisLabel: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],//X轴坐标
+    data: [10, 50, 200, 330, 390, 320, 220],//柱状图数据
+    barStyle: {
+      width: 70,//柱状图宽度
+      color: '#1abc9c'//柱状图颜色
+    }
+  }
+
+  function setOption(options) {
+    drawAxis(options)
+    drawYLabels(options)
+    drawXLabels(options)
+    // drawData(options)
+    drawDataGradient(options)
+  }
+
+  // 绘制坐标轴
+  function drawAxis(options) {
+    let chartZone = options.chartZone
+    context.strokeWidth = 4
+    context.strokeStyle = '#353535'
+    context.moveTo(chartZone[0], chartZone[1])
+    context.lineTo(chartZone[0], chartZone[3])
+    context.lineTo(chartZone[2], chartZone[3])
+    context.stroke()
+  }
+  // 绘制y轴坐标
+  function drawYLabels(options) {
+    let labels = options.yAxisLabel
+    let chartZone = options.chartZone
+    const yLength = (options.chartZone[3] - options.chartZone[1])
+    const gap = yLength / (labels.length - 1)
+
+    labels.forEach((label, index) => {
+      // 绘制坐标文字
+      let offset = context.measureText(labels[index]).width + 15;
+      context.strokeStyle = '#eaeaea'
+      context.font = '16px'
+      context.fillText(labels[index], chartZone[0] - offset, chartZone[3] - index * gap + 4)
+
+      // 绘制小间隔
+      context.beginPath()
+      context.strokeStyle = '#353535'
+      context.moveTo(chartZone[0] - 10, chartZone[3] - index * gap)
+      context.lineTo(chartZone[0], chartZone[3] - index * gap)
+      context.stroke()
+
+      if (index != 0) {
+        // 绘制辅助线
+        context.beginPath()
+        context.strokeStyle = '#eaeaea'
+        context.moveTo(chartZone[0], chartZone[3] - index * gap)
+        context.lineTo(chartZone[2], chartZone[3] - index * gap)
+        context.stroke()
+      }
+    });
+  }
+  // 绘制x轴坐标
+  function drawXLabels(options) {
+    let labels = options.xAxisLabel
+    let chartZone = options.chartZone
+    const xLength = (options.chartZone[2] - options.chartZone[0])
+    const gap = xLength / labels.length
+
+    labels.forEach((label, index) => {
+      // 绘制坐标文字
+      const offset = context.measureText(label).width
+      context.strokeStyle = '#eaeaea'
+      context.font = '18px'
+      context.fillText(label, chartZone[0] + index * gap + gap / 2 - offset / 2, chartZone[3] + 15)
+
+      // 绘制小间隔
+      context.beginPath()
+      context.strokeStyle = '#353535'
+      context.moveTo(chartZone[0] + index * gap + gap / 2, chartZone[3])
+      context.lineTo(chartZone[0] + index * gap + gap / 2, chartZone[3] + 5)
+      context.stroke()
+    })
+  }
+  // 绘制柱状图
+  function drawData(options) {
+    let chartZone = options.chartZone
+    let data = options.data
+    let barStyle = options.barStyle
+    let xLength = options.chartZone[2] - options.chartZone[0]
+    let yLength = options.chartZone[3] - options.chartZone[1]
+    let gap = xLength / options.xAxisLabel.length
+
+    data.forEach((item, index) => {
+      context.fillStyle = options.barStyle.color || '#1abc9c'
+      const width = options.barStyle.width
+      const height = item / options.yMax * yLength
+      const x = chartZone[0] + (index + 1) * gap - options.barStyle.width / 2 - gap / 2
+      const y = yLength - height + chartZone[1]
+      context.fillRect(x, y, width, height)
+    })
+  }
+  // 绘制线性渐变色柱状图
+  function drawDataGradient(options) {
+    let chartZone = options.chartZone
+    let data = options.data
+    let barStyle = options.barStyle
+    let xLength = options.chartZone[2] - options.chartZone[0]
+    let yLength = options.chartZone[3] - options.chartZone[1]
+    let gap = xLength / options.xAxisLabel.length
+
+    //创建渐变色
+    let fillStyleGradient = context.createLinearGradient(50, 50, 50, 700)
+    fillStyleGradient.addColorStop(0, options.barStyle.color)
+    fillStyleGradient.addColorStop(1, 'rgba(1,176,241,0.6)')
+
+    data.forEach((item, index) => {
+      context.fillStyle = fillStyleGradient
+      const width = options.barStyle.width
+      const height = item / options.yMax * yLength
+      const x = chartZone[0] + (index + 1) * gap - options.barStyle.width / 2 - gap / 2
+      const y = yLength - height + chartZone[1]
+      context.fillRect(x, y, width, height)
+    })
+  }
+  // 启动绘图
+  setOption(options)
+</script>
+
+</html>
