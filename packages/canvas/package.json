@@ -1,0 +1,11 @@
+{
+  "name": "canvas",
+  "version": "0.0.01",
+  "description": "带着canvas去流浪",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
