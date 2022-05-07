@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width,initial-scale=1" name="viewport" />
+  <title></title>
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+    }
+
+    canvas {
+      background-color: #fff;
+    }
+  </style>
+
+  <body>
+    <canvas height="800" id="canvas" width="1200"></canvas>
+  </body>
+  <script>
+    // 获取canvas绘图上下文
+    const canvas = document.getElementById("canvas");
+    const context = canvas.getContext("2d");
+
+    //基本绘图配置
+    let options = {
+      chartZone: [50, 50, 1000, 500],
+      radius: [30, 120],
+      center: ["50%", "50%"],
+      data: [
+        { value: 10, name: "rose1" },
+        { value: 5, name: "rose2" },
+        { value: 15, name: "rose3" },
+        { value: 25, name: "rose4" },
+        { value: 20, name: "rose5" },
+        { value: 35, name: "rose6" },
+        { value: 30, name: "rose7" },
+        { value: 40, name: "rose8" },
+      ],
+      colorPool: [
+        "rgba(144,132,255,1)",
+        "rgba(60,178,239,1)",
+        "rgba(143,228,228,1)",
+        "rgba(174,253,202,1)",
+        "rgba(255,240,101,1)",
+        "rgba(255,174,139,1)",
+        "rgba(255,125,161,1)",
+        "rgba(254,206,255,1)",
+      ],
+      highlightPool: [
+        "rgba(144,132,255,1)",
+        "rgba(60,178,239,1)",
+        "rgba(143,228,228,1)",
+        "rgba(174,253,202,1)",
+        "rgba(255,240,101,1)",
+        "rgba(255,174,139,1)",
+        "rgba(255,125,161,1)",
+        "rgba(254,206,255,1)",
+      ],
+    };
+
+    function setOption(options) {
+      const chartZone = options.chartZone;
+      const colorPool = options.colorPool;
+      const data = options.data;
+      const totalData = data.reduce((c, d) => c + d.value, 0);
+      console.log(totalData);
+      context.translate(
+        (chartZone[2] - chartZone[0]) / 2,
+        (chartZone[3] - chartZone[1]) / 2
+      );
+
+      data.forEach((item, index) => {
+        const itemAngle = (2 * Math.PI * item.value) / totalData;
+        context.beginPath();
+        context.fillStyle = colorPool[index] || "#ef2";
+        context.lineTo(100, 0);
+        context.arc(0, 0, 100, 0, itemAngle, false);
+        context.lineTo(0, 0);
+        context.fill();
+        context.rotate(itemAngle);
+      });
+
+      context.beginPath();
+      context.fillStyle = "#fff";
+      context.arc(0, 0, 30, 0, 2 * Math.PI);
+      context.fill();
+    }
+
+    setOption(options);
+  </script>
+</html>
