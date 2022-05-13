@@ -9,13 +9,17 @@
   <body></body>
   <script src="./index.js"></script>
   <script>
-    const p = new ZPromise((res, rej) => {
-      setTimeout(() => {
-        rej("404");
-      }, 1000);
+    setTimeout(() => {
+      console.log(1);
+    })
+    const p = new Promise((res, rej) => {
+      console.log(2);
+      rej(3);
     });
     p.then((res) => {
       console.log(res);
+    }, (rej) => {
+      console.log(rej);
     });
   </script>
 </html>
