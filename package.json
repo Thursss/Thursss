@@ -1,6 +1,13 @@
 {
   "name": "root",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "demo/*"
+  ],
+  "scripts": {
+    "install": "lerna bootstarp"
+  },
   "devDependencies": {
     "lerna": "^4.0.0"
   }
