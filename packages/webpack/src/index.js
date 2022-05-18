@@ -1,5 +1,7 @@
+// import './css/index.scss'
+
 const fn = () => {
-  console.log(1);
+  console.log('index');
 }
 
 fn()
