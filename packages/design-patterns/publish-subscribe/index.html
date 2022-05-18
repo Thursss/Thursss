@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <button class="but">发通知</button>
+    </section>
+  </body>
+  <script src="./index.js"></script>
+  <script>
+    const p = new PubSub();
+    p.pub("a", 1);
+    // p.sub("a", function (res) {
+    //   console.log(1, res);
+    // });
+
+    p.pub("a", 2);
+    p.sub("a", function (res) {
+      console.log(2, res);
+    });
+
+    document
+      .getElementsByClassName("but")[0]
+      .addEventListener("click", function (e) {
+        p.notify('a');
+      });
+  </script>
+</html>
