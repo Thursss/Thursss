@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script src="./index.js"></script>
+  <script>
+    const aF = singleton;
+    const bF = singleton;
+    aF.a = '2'
+    console.log(aF.a, bF);
+
+    const aC = Singleton.getSingleton()
+    const bC = Singleton.getSingleton()
+
+    aC.a = '2'
+    console.log(aC, bC);
+  </script>
+</html>
