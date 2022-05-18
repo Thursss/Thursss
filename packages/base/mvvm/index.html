@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <p z-html="message"></p>
+      <button class="but">按钮</button>
+    </div>
+  </body>
+  <script>
+    let obj = {
+      name: "小米",
+    };
+    const option = new Proxy(obj, {
+      set(target, key, value) {
+        if (key === "message") {
+          const eles = document.querySelectorAll("[z-html]");
+          eles.forEach((element) => {
+            element.innerHTML = value;
+          });
+        }
+        return Reflect.set(target, key, value);
+      },
+      get(target, key) {
+        console.log("获取了getter属性");
+        return target[key];
+      },
+    });
+  </script>
+  <script src="./lib/strategy.js"></script>
+  <script src="./lib//wacthVmData.js"></script>
+  <script src="./lib/compiler.js"></script>
+  <script src="./lib/index.js"></script>
+  <script>
+    let options = {
+      ele: '#app',
+      data: {
+        message: '嘎嘎嘎嘎'
+      }
+    }
+    const a = new Zt(options)
+
+    document
+      .getElementsByClassName("but")[0]
+      .addEventListener("click", function () {
+        a.data.message = '22'
+      });
+  </script>
+</html>
