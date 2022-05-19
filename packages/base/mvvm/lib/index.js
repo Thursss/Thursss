@@ -14,10 +14,13 @@ class Zt {
     this.data = watchVmData(
       data,
       (target, p, value) => {
-        console.log(target, p, value);
+        const pub = Pub.getSingleton('z-html', observe)
+        pub.pub(p, value)
+        observe.notify(p)
       },
       (target, p) => {
-        console.log(target, p);
+        const pub = Pub.getSingleton('z-html', observe)
+        pub.pub(p, target[p])
       }
     );
   }
@@ -25,6 +28,6 @@ class Zt {
     const { ele } = options;
     if (!ele) throw "错误";
     const c = new Compiler();
-    c.compiler(this, document.querySelector(ele))
+    c.compiler(this, document.querySelector(ele));
   }
 }

@@ -11,8 +11,8 @@ function watchVmData (obj, setBind, getLogger) {
       setBind(target, p, value);
       return Reflect.set(target, p, value);
     },
-    get(target, p) {
-      getLogger((target, p));
+    get (target, p) {
+      getLogger(target, p);
       return Reflect.get(target, p);
     },
   });

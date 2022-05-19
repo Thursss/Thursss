@@ -9,10 +9,12 @@
   <body>
     <div id="app">
       <p z-html="message"></p>
-      <button class="but">按钮</button>
+      <button class="but">我是</button>
+      <input class="inp" type="text">
+      <p z-html="name"></p>
     </div>
   </body>
-  <script>
+  <!-- <script>
     let obj = {
       name: "小米",
     };
@@ -31,24 +33,26 @@
         return target[key];
       },
     });
-  </script>
+  </script> -->
+  <script src="./lib/pubSub.js"></script>
   <script src="./lib/strategy.js"></script>
   <script src="./lib//wacthVmData.js"></script>
   <script src="./lib/compiler.js"></script>
   <script src="./lib/index.js"></script>
   <script>
-    let options = {
-      ele: '#app',
+    const a = new Zt({
+      ele: "#app",
       data: {
-        message: '嘎嘎嘎嘎'
-      }
-    }
-    const a = new Zt(options)
+        message: "嘎嘎嘎11嘎",
+        name: '王路飞'
+      },
+    });
 
     document
       .getElementsByClassName("but")[0]
       .addEventListener("click", function () {
-        a.data.message = '22'
+        a.data.name = document.getElementsByClassName('inp')[0].value
+        console.log(observe);
       });
   </script>
 </html>
