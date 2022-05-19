@@ -18,7 +18,7 @@ const singleton = (function () {
 class Singleton {
   constructor() {
     this.singleton = null;
-    this.c=2
+    this.c = 2;
   }
 
   static getSingleton() {
@@ -26,5 +26,19 @@ class Singleton {
     return this.singleton;
   }
 
-  b = 1
+  b = 1;
 }
+
+class Singleton {
+  constructor(arg) {
+    // 返回唯一实例
+    if (typeof Singleton.instance === "object") {
+      return Singleton.instance;
+    }
+    // 初次创建对象 把唯一保存在instance上
+    this.arg = arg;
+    Singleton.instance = this;
+    return this;
+  }
+}
+
