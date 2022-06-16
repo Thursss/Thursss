@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="lottie">
+      <h1>lottie-web 动画</h1>
+      <div id="bodyAnimation"></div>
+    </div>
+  </body>
+  <script src="./lib/lottie.min.js"></script>
+  <script>
+    const lottieContainer = document.querySelector("#bodyAnimation");
+    lottie.loadAnimation({
+      container: lottieContainer, // the dom element that will contain the animation
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      path: "./107411-macho-man.json", // the path to the animation json
+    });
+  </script>
+</html>

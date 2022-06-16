@@ -12,7 +12,7 @@ class PubSub {
     this.message[type] = content;
   }
   // 订阅
-  sub(type, cb) {
+  sub(type, cb) { 
     if (!this.listeners[type]) this.listeners[type] = [];
     this.listeners[type].push(cb);
   }
