@@ -12,6 +12,7 @@
   </body>
   <script src="./debounce.js"></script>
   <script src="./throttle.js"></script>
+  <script src="./color.js"></script>
   <script>
     const onClickDebounce = debounce(function (v) {
       console.log(v);
@@ -19,5 +20,9 @@
     const onClickThrottle = throttle(function (v) {
       console.log(v);
     }, 1000);
+  </script>
+  <script>
+    console.log(isColor("rgba(2 ,3 ,3 , 1)"));
+    console.log(hexToRGB("#abf222fa"));
   </script>
 </html>
