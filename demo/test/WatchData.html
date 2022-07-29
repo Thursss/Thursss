@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    class WatchData {
+      constructor(obj, set, get) {
+        this.obj = new Proxy(obj, {
+          set(target, p, value) {
+            set(target, p, value);
+            return Reflect.set(target, p, value);
+          },
+          get(target, p) {
+            get(target, p);
+            return Reflect.get(target, p);
+          },
+        });
+      }
+    }
+
+    const obj = { a: 1, b: { c: 2 } };
+    const w = new WatchData(
+      obj,
+      (target, p, value) => {
+        console.log("set: ", p);
+      },
+      (target, p) => {
+        console.log("get: ", p);
+      }
+    );
+    // console.log(w.obj.a);
+    w.obj.b.c = 4;
+  </script>
+  <script>
+    const obj1 = {
+      a: 1,
+    };
+    let va = obj1.a;
+    Object.defineProperty(obj1, "a", {
+      get() {
+        console.log("defineProperty get: ");
+        return va;
+      },
+      set(v) {
+        if (va === v) return;
+        console.log("defineProperty set: ", v);
+        va = v;
+      },
+    });
+    obj1.a = 3;
+  </script>
+</html>

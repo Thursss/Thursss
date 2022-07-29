@@ -14,31 +14,11 @@
       <p z-html="name"></p>
     </div>
   </body>
-  <!-- <script>
-    let obj = {
-      name: "小米",
-    };
-    const option = new Proxy(obj, {
-      set(target, key, value) {
-        if (key === "message") {
-          const eles = document.querySelectorAll("[z-html]");
-          eles.forEach((element) => {
-            element.innerHTML = value;
-          });
-        }
-        return Reflect.set(target, key, value);
-      },
-      get(target, key) {
-        console.log("获取了getter属性");
-        return target[key];
-      },
-    });
-  </script> -->
   <script src="./lib/pubSub.js"></script>
   <script src="./lib/strategy.js"></script>
   <script src="./lib//wacthVmData.js"></script>
   <script src="./lib/compiler.js"></script>
-  <script src="./lib/index.js"></script>
+  <script src="./lib/index.js"></script> 
   <script>
     const a = new Zt({
       ele: "#app",
