@@ -13,21 +13,24 @@
   </body>
   <script src="./index.js"></script>
   <script>
-    const p = new PubSub();
-    p.pub("a", 1);
-    // p.sub("a", function (res) {
-    //   console.log(1, res);
-    // });
+    const sp = new SubscriptionCenter();
+    const p = new Promulgator("a", sp);
+    const s = new Subscriber("a", sp);
+    
+    p.pub(1);
+    p.pub(2);
 
-    p.pub("a", 2);
-    p.sub("a", function (res) {
-      console.log(2, res);
+    s.sub(function (res) {
+      console.log("a", res);
+    });
+    s.sub(function (res) {
+      console.log("b", res);
     });
 
     document
       .getElementsByClassName("but")[0]
       .addEventListener("click", function (e) {
-        p.notify('a');
+        sp.notice("a");
       });
   </script>
 </html>
