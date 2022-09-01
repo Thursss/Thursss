@@ -99,6 +99,6 @@
   "exclude": [
     "node_modules",
     "./project/bureau-of-statistics",
-    "./project/webpack"
+    "demo/webpack"
   ]
 }
