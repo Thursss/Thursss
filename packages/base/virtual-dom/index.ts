@@ -278,7 +278,7 @@ function dfsPatches(
   return cuurentIndex;
 }
 
-function changeDom(el: HTMLElement | undefined, patches: PatchesDom[]) {    
+function changeDom(el: HTMLElement | undefined, patches: PatchesDom[]) {
   console.log(el, patches);
 }
 
