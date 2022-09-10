@@ -153,8 +153,7 @@ function dfsProps(oldProps, newProps) {
     return currentPatches;
 }
 function dfsChildren(oldChildren, newChildren, index, patches) {
-    var _a;
-    (_a = oldChildren) === null || _a === void 0 ? void 0 : _a.forEach(function (c, i) {
+    oldChildren === null || oldChildren === void 0 ? void 0 : oldChildren.forEach(function (c, i) {
         if (c instanceof VElement) {
             index = dfsWalk(c, newChildren === null || newChildren === void 0 ? void 0 : newChildren[i], index, patches);
         }

@@ -7,4 +7,16 @@
     <title>Document</title>
   </head>
   <body></body>
+  <script type="module" src="./index.js"></script>
+  <script type="module">
+    import { ArrayList } from "./index.js";
+
+    const fruit = new ArrayList(["苹果", "荔枝", "梨"]);
+
+    fruit.show();
+    const i = fruit.remove(1);
+    fruit.show();
+    const f = fruit.remove("");
+    fruit.show();
+  </script>
 </html>
