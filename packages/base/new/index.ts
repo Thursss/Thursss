@@ -19,5 +19,3 @@ function objectFactory(fn: Function, ...arg: any[]) {
   // 返回实例对象
   return p;
 }
-
-

@@ -1,38 +1,43 @@
-"use strict";
-class Zue {
-    constructor(options) {
-        const { proxyObj } = new Observe(options.data, (target, property) => {
+var Zue = /** @class */ (function () {
+    function Zue(options) {
+        var proxyObj = new Observe(options.data, function (target, property) {
             console.log("get: ", target, property);
-        }, (target, property, value) => {
+        }, function (target, property, value) {
             console.log("set: ", target, property, value);
-        });
+        }).proxyObj;
         this.$data = proxyObj;
         this.proxyData();
         options.mountded.call(this);
     }
-    proxyData() {
-        const _this = this;
-        for (const key in _this.$data) {
+    Zue.prototype.proxyData = function () {
+        var _this = this;
+        var _loop_1 = function (key) {
             Object.defineProperty(_this, key, {
-                get() {
+                get: function () {
                     return _this.$data[key];
                 },
-                set(v) {
+                set: function (v) {
                     if (v === _this.$data[key])
                         return;
                     _this.$data[key] = v;
                 },
             });
+        };
+        for (var key in _this.$data) {
+            _loop_1(key);
         }
-    }
-}
-class Observe {
-    constructor(obj, get, set, type = "proxy") {
+    };
+    return Zue;
+}());
+var Observe = /** @class */ (function () {
+    function Observe(obj, get, set, type) {
+        var _this_1 = this;
+        if (type === void 0) { type = "proxy"; }
         this.proxyObj = null;
-        this.byProxy = (obj) => {
-            const _this = this;
+        this.byProxy = function (obj) {
+            var _this = _this_1;
             return new Proxy(obj, {
-                get(target, property, receiver) {
+                get: function (target, property, receiver) {
                     var _a;
                     if (typeof target[property] === "object") {
                         return _this.byProxy.call(_this, target[property]);
@@ -40,7 +45,7 @@ class Observe {
                     (_a = _this.get) === null || _a === void 0 ? void 0 : _a.call(_this, target, property, receiver);
                     return Reflect.get(target, property, receiver);
                 },
-                set(target, property, value, receiver) {
+                set: function (target, property, value, receiver) {
                     var _a;
                     if (target[property] === value)
                         return false;
@@ -49,22 +54,22 @@ class Observe {
                 },
             });
         };
-        this.byDefineProperty = (obj) => {
+        this.byDefineProperty = function (obj) {
             if (!obj || typeof obj !== "object")
                 return;
-            const _this = this;
-            for (const key in obj) {
+            var _this = _this_1;
+            var _loop_2 = function (key) {
                 _this.byDefineProperty.call(_this, obj[key]);
                 (function (val) {
                     Object.defineProperty(obj, key, {
                         enumerable: true,
                         configurable: true,
-                        get() {
+                        get: function () {
                             var _a;
                             (_a = _this.get) === null || _a === void 0 ? void 0 : _a.call(_this, obj, key, null);
                             return val;
                         },
-                        set(newVal) {
+                        set: function (newVal) {
                             var _a;
                             if (val === newVal)
                                 return;
@@ -74,6 +79,9 @@ class Observe {
                         },
                     });
                 })(obj[key]);
+            };
+            for (var key in obj) {
+                _loop_2(key);
             }
             return obj;
         };
@@ -91,9 +99,11 @@ class Observe {
                 break;
         }
     }
-}
-class PubSub {
-    constructor() {
+    return Observe;
+}());
+var PubSub = /** @class */ (function () {
+    function PubSub() {
         this;
     }
-}
+    return PubSub;
+}());
