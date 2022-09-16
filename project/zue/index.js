@@ -31,8 +31,8 @@ var Zue = /** @class */ (function () {
 }());
 var Observe = /** @class */ (function () {
     function Observe(obj, get, set, type) {
-        if (type === void 0) { type = "proxy"; }
         var _this_1 = this;
+        if (type === void 0) { type = "proxy"; }
         this.proxyObj = null;
         this.byProxy = function (obj) {
             var _this = _this_1;

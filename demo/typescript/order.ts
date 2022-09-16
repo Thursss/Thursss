@@ -1,3 +1,5 @@
 class Order {
-  constructor(public orderId: string) {}
+  constructor(public orderId: string) {
+    console.log(this.orderId);
+  }
 }

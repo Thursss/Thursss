@@ -8,6 +8,7 @@ export class ArrayList<T> {
     this.elements.forEach((element) => console.log(element));
   }
 
+  
   public remove(index: number): number;
   public remove(obj: T): T;
   public remove(indexOrObj): any {
