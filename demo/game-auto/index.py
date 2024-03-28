@@ -9,7 +9,7 @@ def find_target_image_position(target_img, screen_img):
     target_img = cv2.imread(target_img)
     # screen_img = pyautogui.screenshot()
     screen_img = cv2.imread(screen_img)
-    screen_img = cv2.cvtColor(np.array(screen_img), cv2.COLOR_RGB2BGR)
+    # screen_img = cv2.cvtColor(np.array(screen_img), cv2.COLOR_RGB2BGR)
 
     # 转换为灰度图像
     target_gray = cv2.cvtColor(target_img, cv2.COLOR_BGR2GRAY)

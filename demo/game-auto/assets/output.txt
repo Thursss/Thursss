@@ -1,0 +1,6 @@
+Vue Router
+The official Router
+for Vue.js
+
+Expressive, configurable and convenient routing
+for Vue.js
